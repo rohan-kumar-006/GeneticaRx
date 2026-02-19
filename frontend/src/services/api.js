@@ -6,7 +6,7 @@ const API_URL =
 export const analyzeVCF = async (file, drugs) => {
     try {
         const formData = new FormData();
-        formData.append("vcf", file);
+        formData.append("file", file);
         formData.append("drugs", JSON.stringify(drugs));
 
         const response = await fetch(`${API_URL}/api/analyze`, {
