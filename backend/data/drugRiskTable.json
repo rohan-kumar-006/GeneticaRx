@@ -1,0 +1,36 @@
+{
+    "CODEINE": {
+        "UM": "Toxic",
+        "RM": "Adjust Dosage",
+        "NM": "Safe",
+        "IM": "Adjust Dosage",
+        "PM": "Ineffective"
+    },
+    "CLOPIDOGREL": {
+        "UM": "Safe",
+        "RM": "Safe",
+        "NM": "Safe",
+        "IM": "Adjust Dosage",
+        "PM": "Ineffective"
+    },
+    "WARFARIN": {
+        "NM": "Safe",
+        "IM": "Adjust Dosage",
+        "PM": "Toxic"
+    },
+    "SIMVASTATIN": {
+        "NM": "Safe",
+        "IM": "Adjust Dosage",
+        "PM": "Toxic"
+    },
+    "AZATHIOPRINE": {
+        "NM": "Safe",
+        "IM": "Adjust Dosage",
+        "PM": "Toxic"
+    },
+    "FLUOROURACIL": {
+        "NM": "Safe",
+        "IM": "Adjust Dosage",
+        "PM": "Toxic"
+    }
+}

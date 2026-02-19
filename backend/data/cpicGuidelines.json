@@ -1,0 +1,142 @@
+{
+  "CODEINE": {
+    "gene": "CYP2D6",
+    "mappings": {
+      "UM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Avoid codeine and tramadol due to risk of life-threatening respiratory depression. Use non-opioid analgesics or morphine."
+      },
+      "RM": {
+        "risk": "Adjust Dosage",
+        "severity": "moderate",
+        "recommendation": "Monitor closely for toxicity. Consider alternative analgesic if adverse effects occur."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing recommended per label."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "moderate",
+        "recommendation": "Reduced analgesic response possible. Consider alternative opioid if ineffective."
+      },
+      "PM": {
+        "risk": "Ineffective",
+        "severity": "high",
+        "recommendation": "Avoid codeine due to lack of efficacy. Use morphine or non-opioid alternatives."
+      }
+    }
+  },
+  "CLOPIDOGREL": {
+    "gene": "CYP2C19",
+    "mappings": {
+      "UM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing recommended."
+      },
+      "RM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing recommended."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing recommended."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Reduced antiplatelet effect possible. Consider alternative therapy such as prasugrel or ticagrelor."
+      },
+      "PM": {
+        "risk": "Ineffective",
+        "severity": "critical",
+        "recommendation": "Avoid clopidogrel. Use alternative P2Y12 inhibitor such as prasugrel or ticagrelor."
+      }
+    }
+  },
+  "WARFARIN": {
+    "gene": "CYP2C9",
+    "mappings": {
+      "NM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing per clinical guidelines."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Reduce initial dose by 20–50% and monitor INR closely."
+      },
+      "PM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Significant dose reduction required. High bleeding risk. Consider alternative anticoagulant."
+      }
+    }
+  },
+  "SIMVASTATIN": {
+    "gene": "SLCO1B1",
+    "mappings": {
+      "NM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing recommended."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "moderate",
+        "recommendation": "Limit simvastatin dose to <20 mg/day or consider alternative statin."
+      },
+      "PM": {
+        "risk": "Toxic",
+        "severity": "high",
+        "recommendation": "Avoid simvastatin due to high myopathy risk. Use pravastatin or rosuvastatin."
+      }
+    }
+  },
+  "AZATHIOPRINE": {
+    "gene": "TPMT",
+    "mappings": {
+      "NM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard starting dose recommended."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Reduce starting dose by 30–70% and monitor blood counts."
+      },
+      "PM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Reduce starting dose by ~90% or use alternative non-thiopurine therapy."
+      }
+    }
+  },
+  "FLUOROURACIL": {
+    "gene": "DPYD",
+    "mappings": {
+      "NM": {
+        "risk": "Safe",
+        "severity": "none",
+        "recommendation": "Standard dosing recommended."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Reduce starting dose by ~50% and titrate based on toxicity."
+      },
+      "PM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Avoid fluoropyrimidine therapy due to high risk of fatal toxicity."
+      }
+    }
+  }
+}
