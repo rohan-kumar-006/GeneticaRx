@@ -9,9 +9,9 @@ export const analyzeVCF = async (file, drugs) => {
         formData.append("vcf", file);
         formData.append("drugs", JSON.stringify(drugs));
 
-        const response = await fetch(`${API_URL}/analyze`, {
+        const response = await fetch(`${API_URL}/api/analyze`, {
             method: "POST",
-            body: formData,
+            body: formData
         });
 
         const data = await response.json();
