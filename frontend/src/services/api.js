@@ -1,4 +1,7 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL =
+    window.location.hostname === "localhost"
+        ? "http://localhost:5000"
+        : "https://geneticarx-backend.onrender.com";
 
 export const analyzeVCF = async (file, drugs) => {
     try {
