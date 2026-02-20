@@ -9,8 +9,11 @@ Rohan Kumar
 👉 Hosted Application URL:
 https://geneticarx-frontend.onrender.com/
 
-🎥 LinkedIn Video Demonstration
+🎥 LinkedIn Video Demonstration:
+https://www.linkedin.com/posts/anand-choubey-979b17326_rift2026-pharmacogenomics-precisionmedicine-activity-7430413674655395841-JWs9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJkKa0Bh_9d7WfguLPeBQ7lceX1PjaU53E
 
+🎥 Demo Video Demonstration: 
+https://drive.google.com/file/d/16Onle8DtOZvQQ5JlRJoRUy5D1RGA6cdF/view?usp=drive_link
 
 Hashtags used:
 #RIFT2026 #Pharmacogenomics #AlinHealthcare
