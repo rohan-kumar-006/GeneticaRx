@@ -1,90 +1,162 @@
 # GeneticaRx - Pharmacogenomic Risk Prediction System
+Pharmacogenomic Risk Prediction System
+Team: Alpha Beta (Team 16)
+Members:
+Anand Choubey
+Rohan Kumar
 
-**RIFT 2026 Hackathon - Pharmacogenomics / Explainable AI Track**
+🔗 Live Demo
+👉 Hosted Application URL:
+https://geneticarx-frontend.onrender.com/
 
-GeneticaRx interprets patient genetic data (VCF files) to predict personalized drug risks and generate clinically actionable recommendations with AI explanations.
+🎥 LinkedIn Video Demonstration
 
-## 🚀 Key Features
 
-*   **VCF Parsing**: Extracts variants for **CYP2D6, CYP2C19, CYP2C9, SLCO1B1, TPMT, DPYD**.
-*   **Pharmacogenomic Logic**: strict diplotype construction and phenotype prediction.
-*   **Risk Assessment**: Maps phenotypes to drug risks (Safe, Adjust Dosage, Toxic, Ineffective).
-*   **CPIC Guidelines**: Integrated clinical recommendations.
-*   **Explainable AI**: LLM-generated summaries of biological mechanisms (with failsafe).
-*   **Strict Validation**: JSON schema enforcement and risk-CPIC alignment checks.
+Hashtags used:
+#RIFT2026 #Pharmacogenomics #AlinHealthcare
+🏗 Architecture Overview
+GeneticaRx is a deterministic pharmacogenomic interpretation system designed to convert raw VCF genomic files into structured, CPIC-aligned therapeutic insights.
 
-## 🛠️ Tech Stack
+High-Level Workflow
+VCF Upload → Variant Parsing → Star Allele Mapping → Diplotype Engine → Phenotype Classification → Drug Risk Mapping → Clinical Explanation → Structured JSON Output
 
-*   **Frontend**: React (Vite), Tailwind CSS
-*   **Backend**: Node.js, Express.js
-*   **AI**: OpenAI API (gpt-3.5-turbo)
+Backend Architecture
+Express.js REST API
+Deterministic rule-based pharmacogenomic engine
+CPIC-aligned risk mapping
+Confidence scoring module
+Global error handling middleware
+5MB VCF validation & parsing pipeline
+Structured JSON schema enforcement
+Frontend Architecture
+Modern dashboard interface
+Risk visualization (Safe / Adjust Dosage / Toxic / Ineffective / Unknown)
+Structured clinical explanation module
+Confidence bar visualization
+Multi-drug selection support
+AI Layer
+LLM-assisted structured clinical explanation generation
+Summary / Mechanism / Clinical Impact format
+Fallback-safe generation handling
 
-## 📦 Installation & Setup
+🧰 Tech Stack
+Frontend
+React (or specify if different)
+Modern CSS / UI framework
+REST API integration
 
-### Prerequisites
+Backend
+Node.js
+Express.js
+Multer (file handling)
+Custom deterministic rule engine
+LLM API Integration
 
-*   Node.js (v18+)
-*   npm
+Deployment
+Render
 
-### 1. clone Repository
+Environment-based configuration
 
-```bash
-git clone <repository-url>
-cd pharmaguard
-```
-
-### 2. Backend Setup
-
-```bash
+⚙️ Installation Instructions
+1️⃣ Clone Repository
+git clone https://github.com/your-username/geneticarx.git
+cd geneticarx
+2️⃣ Backend Setup
 cd backend
 npm install
-```
 
-**Environment Variables**:
-Create `.env` in `backend/`:
-```env
+Create .env file:
+
 PORT=5000
-OPENAI_API_KEY=your_openai_key_here
-```
-*(Note: If no API key is provided, the system runs in failsafe mode)*
+LLM_API_KEY=your_api_key_here
 
-**Start Server**:
-```bash
+Start backend:
+
 npm start
-# Runs on http://localhost:5000
-```
-
-### 3. Frontend Setup
-
-```bash
-cd ../frontend
+3️⃣ Frontend Setup
+cd frontend
 npm install
-npm run dev
-# Runs on http://localhost:5173
-```
+npm start
+📡 API Documentation
+POST /analyze
 
-### 4. Verification
+Analyzes uploaded VCF file for selected drugs.
+Request
+Content-Type: multipart/form-data
+Fields:
+file: VCF file (max 5MB)
+drugs: array of selected drugs
+Response Structure
+Single Drug:
+{
+  "patient_id": "PATIENT_001",
+  "drug": "CODEINE",
+  "risk_assessment": {
+    "risk_label": "Ineffective",
+    "confidence_score": 0.95,
+    "severity": "high"
+  },
+  "pharmacogenomic_profile": {
+    "primary_gene": "CYP2D6",
+    "diplotype": "*4/*4",
+    "phenotype": "PM"
+  },
+  "clinical_recommendation": {
+    "text": "Avoid codeine due to lack of efficacy.",
+    "source": "CPIC Guidelines"
+  }
+}
 
-To run the automated backend pipeline test:
+Multi-Drug:
 
-```bash
-cd backend
-node test_pipeline.js
-```
+{
+  "analysis_results": [
+    { ...drug1_result },
+    { ...drug2_result }
+  ]
+}
 
-## 🧪 Usage
+🧪 Usage Examples
+Example 1 – Single Gene Case
+Input:
+CYP2D6 *4/*4
+Drug:
+Codeine
+Output:
+Ineffective
+Recommendation: Avoid codeine.
 
-1.  Open Frontend.
-2.  Upload a VCF file (Example: `backend/test/test.vcf`).
-3.  Select drugs (e.g., Codeine, Warfarin).
-4.  Click **Analyze Risk Profile**.
-5.  View structured report with risk cards and CPIC guidelines.
+Example 2 – Multi-Gene Case
+Input:
+CYP2C9 *3/*3
+SLCO1B1 *1/*
+Drugs:
+Warfarin, Simvastatin
+Output:
+Warfarin → Toxic
+Simvastatin → Adjust Dosage
 
-## ⚠️ Compliance
+🛡 Error Handling
+Invalid VCF format detection
+Missing INFO annotation validation
+File size limit (5MB)
+Structured error JSON responses
+Graceful failure without server crash
 
-*   **Schema**: Strictly enforces output JSON structure.
-*   **Accuracy**: Validated against CPIC guidelines.
-*   **Safety**: Internal cross-checks between risk engine and CPIC.
+📊 Features
+CPIC-aligned dosing recommendations
+Deterministic risk engine
+Multi-drug support
+Multi-gene analysis
+Structured clinical explanation
+Confidence scGorin
+5MB VCF support
+Production-ready backend
 
----
-**Developers**: RIFT 2026 Hackathon Team
+👥 Team Members
+Team Alpha Beta (Team 16)
+Anand Chouubry
+Rohan Kumar
+RIFT 2026 Submission
+📜 License
+For academic and hackathon evaluation purposes.
